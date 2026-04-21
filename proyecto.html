@@ -1,0 +1,447 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Minimalist Developer Portfolio Variant 1</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2b4bee",
+              "background-light": "#f6f6f8",
+              "background-dark": "#080a12",
+              glass: "rgba(255, 255, 255, 0.03)",
+              "glass-border": "rgba(255, 255, 255, 0.1)",
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+              mono: ["Fira Code", "monospace"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .code-syntax-keyword {
+        color: #c678dd;
+      }
+      .code-syntax-string {
+        color: #98c379;
+      }
+      .code-syntax-function {
+        color: #61afef;
+      }
+      .code-syntax-variable {
+        color: #e06c75;
+      }
+      .code-syntax-comment {
+        color: #5c6370;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-white"
+  >
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+      <header
+        class="fixed top-0 z-50 w-full glass-panel border-b-0 mt-4 mx-auto max-w-5xl rounded-xl left-0 right-0 px-6 py-3 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="size-8 bg-primary rounded flex items-center justify-center"
+          >
+            <span class="material-symbols-outlined text-white">terminal</span>
+          </div>
+          <h2 class="text-xl font-bold tracking-tight">dev.init()</h2>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#about"
+            >./about</a
+          >
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#skills"
+            >./skills</a
+          >
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#projects"
+            >./work</a
+          >
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#contact"
+            >./contact</a
+          >
+        </nav>
+        <button
+          class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all"
+        >
+          Hire Me
+        </button>
+      </header>
+      <main class="flex-1 flex flex-col items-center px-4 pt-32 pb-20">
+        <section class="w-full max-w-5xl mb-32">
+          <div class="flex flex-col gap-6 items-start">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest"
+            >
+              <span class="relative flex h-2 w-2">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"
+                ></span>
+                <span
+                  class="relative inline-flex rounded-full h-2 w-2 bg-primary"
+                ></span>
+              </span>
+              Available for projects
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black leading-tight max-w-3xl">
+              Crafting <span class="text-primary">performant</span> digital
+              experiences.
+            </h1>
+            <p
+              class="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed"
+            >
+              Full-stack engineer specializing in high-performance web
+              applications with a focus on clean code and minimalist,
+              glassmorphic aesthetics.
+            </p>
+            <div class="flex gap-4 mt-4">
+              <button
+                class="bg-primary text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 group"
+              >
+                Explore Projects
+                <span
+                  class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                  >arrow_forward</span
+                >
+              </button>
+              <button
+                class="glass-panel px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-colors"
+              >
+                View Resume
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="w-full max-w-5xl mb-32" id="about">
+          <div class="flex items-center gap-4 mb-8">
+            <span class="text-primary font-mono font-bold text-xl">01.</span>
+            <h2 class="text-3xl font-bold">// About Me</h2>
+            <div class="h-[1px] flex-1 bg-glass-border"></div>
+          </div>
+          <div class="glass-panel rounded-xl overflow-hidden shadow-2xl">
+            <div
+              class="bg-white/5 px-4 py-2 flex items-center gap-2 border-b border-glass-border"
+            >
+              <div class="flex gap-1.5">
+                <div
+                  class="width: 0.75rem; /* 12px */ height: 0.75rem; rounded-full bg-[#ff5f56]"
+                ></div>
+                <div class="size-3 rounded-full bg-[#ffbd2e]"></div>
+                <div class="size-3 rounded-full bg-[#27c93f]"></div>
+              </div>
+              <span class="text-xs font-mono text-slate-500 ml-4">bio.ts</span>
+            </div>
+            <div
+              class="p-6 md:p-10 font-mono text-sm md:text-base leading-relaxed overflow-x-auto"
+            >
+              <pre><code><span class="code-syntax-keyword">class</span> <span class="code-syntax-function">Developer</span> {
+  <span class="code-syntax-keyword">constructor</span>() {
+    <span class="code-syntax-keyword">this</span>.name = <span class="code-syntax-string">'John Doe'</span>;
+    <span class="code-syntax-keyword">this</span>.role = <span class="code-syntax-string">'Fullstack Engineer'</span>;
+    <span class="code-syntax-keyword">this</span>.location = <span class="code-syntax-string">'San Francisco, CA'</span>;
+  }
+
+  <span class="code-syntax-function">getPassions</span>() {
+    <span class="code-syntax-keyword">return</span> [
+      <span class="code-syntax-string">'Minimalist Design'</span>,
+      <span class="code-syntax-string">'System Architecture'</span>,
+      <span class="code-syntax-string">'Open Source Contribution'</span>
+    ];
+  }
+
+  <span class="code-syntax-function">motto</span>() {
+    <span class="code-syntax-keyword">return</span> <span class="code-syntax-string">'Code is poetry, efficiency is beauty.'</span>;
+  }
+}</code></pre>
+            </div>
+          </div>
+        </section>
+        <section class="w-full max-w-5xl mb-32" id="skills">
+          <div class="flex items-center gap-4 mb-8">
+            <span class="text-primary font-mono font-bold text-xl">02.</span>
+            <h2 class="text-3xl font-bold">// Skills</h2>
+            <div class="h-[1px] flex-1 bg-glass-border"></div>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div
+              class="glass-panel p-6 rounded-xl flex flex-col items-center gap-4 hover:border-primary/50 transition-colors group"
+            >
+              <div
+                class="size-12 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-500 group-hover:scale-110 transition-transform"
+              >
+                <span class="material-symbols-outlined text-3xl">html</span>
+              </div>
+              <span class="font-bold text-sm">Frontend</span>
+            </div>
+            <div
+              class="glass-panel p-6 rounded-xl flex flex-col items-center gap-4 hover:border-primary/50 transition-colors group"
+            >
+              <div
+                class="size-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-500 group-hover:scale-110 transition-transform"
+              >
+                <span class="material-symbols-outlined text-3xl">database</span>
+              </div>
+              <span class="font-bold text-sm">Backend</span>
+            </div>
+            <div
+              class="glass-panel p-6 rounded-xl flex flex-col items-center gap-4 hover:border-primary/50 transition-colors group"
+            >
+              <div
+                class="size-12 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-500 group-hover:scale-110 transition-transform"
+              >
+                <span class="material-symbols-outlined text-3xl">cloud</span>
+              </div>
+              <span class="font-bold text-sm">DevOps</span>
+            </div>
+            <div
+              class="glass-panel p-6 rounded-xl flex flex-col items-center gap-4 hover:border-primary/50 transition-colors group"
+            >
+              <div
+                class="size-12 rounded-lg bg-green-500/10 flex items-center justify-center text-green-500 group-hover:scale-110 transition-transform"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >architecture</span
+                >
+              </div>
+              <span class="font-bold text-sm">UI Design</span>
+            </div>
+          </div>
+        </section>
+        <section class="w-full max-w-5xl mb-32" id="projects">
+          <div class="flex items-center gap-4 mb-8">
+            <span class="text-primary font-mono font-bold text-xl">03.</span>
+            <h2 class="text-3xl font-bold">// Projects</h2>
+            <div class="h-[1px] flex-1 bg-glass-border"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="glass-panel rounded-xl overflow-hidden group">
+              <div
+                class="bg-white/5 px-4 py-2 flex items-center justify-between border-b border-glass-border"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-sm text-slate-500"
+                    >folder</span
+                  >
+                  <span class="text-xs font-mono text-slate-300"
+                    >quantum-analytics.v1</span
+                  >
+                </div>
+                <span class="material-symbols-outlined text-xs text-slate-500"
+                  >open_in_new</span
+                >
+              </div>
+              <div
+                class="aspect-video bg-cover bg-center"
+                data-alt="Abstract data visualization dashboard screenshot"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBpMPEpmGlk0ZR2sWFCGxOGhYTyfzgfIvXxoB5be-QSxEowMnMDaS2bQxmBLXRcYr3FRRYEXfwO08QcOLjsrXhv4RGSBfcN6gB17Avnn0JhPD1OZ1g3VsHj_o6JWkr7mBvt_GtfbLpmdaPq7X-KD4Sd-VarI__srUYCEKooeYc-pCatpFZhdWG_daD3nKyFY3JRaYS0REJLrmOTqkh48Eq_jRJjAUQOFPXiQlhPmaEMlKIM4S_JeBbjsaT0BXc4nWW4rb-0vdBRQsw&quot;);
+                "
+              ></div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">Quantum Analytics</h3>
+                <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                  High-performance data visualization platform built with React,
+                  Three.js, and Node.js.
+                </p>
+                <div class="flex gap-2">
+                  <span
+                    class="text-[10px] px-2 py-1 rounded bg-white/5 border border-glass-border font-mono"
+                    >React</span
+                  >
+                  <span
+                    class="text-[10px] px-2 py-1 rounded bg-white/5 border border-glass-border font-mono"
+                    >WebGL</span
+                  >
+                  <span
+                    class="text-[10px] px-2 py-1 rounded bg-white/5 border border-glass-border font-mono"
+                    >Redis</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="glass-panel rounded-xl overflow-hidden group">
+              <div
+                class="bg-white/5 px-4 py-2 flex items-center justify-between border-b border-glass-border"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-sm text-slate-500"
+                    >folder</span
+                  >
+                  <span class="text-xs font-mono text-slate-300"
+                    >nebula-os.sh</span
+                  >
+                </div>
+                <span class="material-symbols-outlined text-xs text-slate-500"
+                  >open_in_new</span
+                >
+              </div>
+              <div
+                class="aspect-video bg-cover bg-center"
+                data-alt="Cyberpunk terminal interface with code windows"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuByN_Y_S5aLB8dVZ851r91mS4EL6W4DlQ6Lyg6B2c-hnKrFLQTvg4xo64xg5qPtE-hDuYC-DjLLIdFQQLzsu8Uu7aKWFCXOO5U-41MG1lshfiLBj8pEcwIXbhlwiZOXHzml9UCz1KwuSHWsY3M21onJj7ZVmviChvGgk8htGQ8raiVl_eefnWQv1qs0grU_lPSt4z0yfAMBKugRCYMWY1PB1_uMvsQWTAkpVxmsj7B5zz4mGN24wxWhQ3ecCUsRkUyJQruwE70UeWk&quot;);
+                "
+              ></div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">Nebula OS</h3>
+                <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                  A browser-based terminal emulator and personal dashboard with
+                  cloud integration.
+                </p>
+                <div class="flex gap-2">
+                  <span
+                    class="text-[10px] px-2 py-1 rounded bg-white/5 border border-glass-border font-mono"
+                    >TypeScript</span
+                  >
+                  <span
+                    class="text-[10px] px-2 py-1 rounded bg-white/5 border border-glass-border font-mono"
+                    >Go</span
+                  >
+                  <span
+                    class="text-[10px] px-2 py-1 rounded bg-white/5 border border-glass-border font-mono"
+                    >Docker</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="w-full max-w-5xl mb-32">
+          <div class="flex items-center gap-4 mb-8">
+            <span class="text-primary font-mono font-bold text-xl">04.</span>
+            <h2 class="text-3xl font-bold">// Experience.json</h2>
+            <div class="h-[1px] flex-1 bg-glass-border"></div>
+          </div>
+          <div
+            class="glass-panel rounded-xl p-8 font-mono text-sm leading-relaxed overflow-x-auto"
+          >
+            <pre><code>{
+  <span class="code-syntax-variable">"workHistory"</span>: [
+    {
+      <span class="code-syntax-variable">"company"</span>: <span class="code-syntax-string">"Stark Industries"</span>,
+      <span class="code-syntax-variable">"role"</span>: <span class="code-syntax-string">"Senior Backend Engineer"</span>,
+      <span class="code-syntax-variable">"period"</span>: <span class="code-syntax-string">"2021 - Present"</span>
+    },
+    {
+      <span class="code-syntax-variable">"company"</span>: <span class="code-syntax-string">"Wayne Enterprises"</span>,
+      <span class="code-syntax-variable">"role"</span>: <span class="code-syntax-string">"Software Architect"</span>,
+      <span class="code-syntax-variable">"period"</span>: <span class="code-syntax-string">"2018 - 2021"</span>
+    }
+  ],
+  <span class="code-syntax-variable">"education"</span>: {
+    <span class="code-syntax-variable">"degree"</span>: <span class="code-syntax-string">"BSc Computer Science"</span>,
+    <span class="code-syntax-variable">"university"</span>: <span class="code-syntax-string">"Stanford"</span>
+  }
+}</code></pre>
+          </div>
+        </section>
+        <section class="w-full max-w-5xl" id="contact">
+          <div
+            class="flex flex-col items-center text-center gap-6 glass-panel rounded-2xl p-12 relative overflow-hidden"
+          >
+            <div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+            <h2 class="text-4xl font-black">Let's build something.</h2>
+            <p class="text-slate-400 max-w-xl">
+              I'm currently looking for new opportunities. My inbox is always
+              open whether you have a question or just want to say hi!
+            </p>
+            <div class="w-full max-w-md mt-6">
+              <div
+                class="flex items-center gap-3 p-4 glass-panel rounded-xl focus-within:border-primary transition-all group"
+              >
+                <span class="font-mono text-primary">$</span>
+                <input
+                  class="bg-transparent border-none focus:ring-0 p-0 text-slate-100 placeholder:text-slate-600 font-mono flex-1"
+                  placeholder="enter your email..."
+                  type="email"
+                />
+                <button
+                  class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform"
+                >
+                  send
+                </button>
+              </div>
+            </div>
+            <div class="flex gap-6 mt-8">
+              <a
+                class="text-slate-500 hover:text-primary transition-colors font-mono text-sm"
+                href="#"
+                >github.com/jdoe</a
+              >
+              <a
+                class="text-slate-500 hover:text-primary transition-colors font-mono text-sm"
+                href="#"
+                >linkedin.com/in/jdoe</a
+              >
+              <a
+                class="text-slate-500 hover:text-primary transition-colors font-mono text-sm"
+                href="#"
+                >twitter.com/jdoe</a
+              >
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer
+        class="w-full border-t border-glass-border py-10 flex flex-col items-center gap-4"
+      >
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-slate-500 text-sm"
+            >copyright</span
+          >
+          <p class="text-slate-500 text-xs font-mono">
+            Designed &amp; Built by John Doe — 2024
+          </p>
+        </div>
+        <div class="flex gap-4 text-xs font-mono text-slate-600">
+          <span>V1.0.4</span>
+          <span>•</span>
+          <span>Production Build</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

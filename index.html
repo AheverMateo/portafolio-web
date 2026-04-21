@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hever Ahumada</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Portafolio web Ahumada Hever Mateo" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="dark">
+    <header class="container-header">
+      <div class="header-brand">
+        <span class="material-symbols-outlined icon">terminal</span>
+        <span class="brand-name">dev.mate0o0</span>
+      </div>
+
+      <nav class="nav-container">
+        <a href="#">./Acerca de mi</a>
+        <a href="#">./Habilidades</a>
+        <a href="#">./proyectos</a>
+        <a href="#">./contacto</a>
+      </nav>
+
+      <button class="button-header">Hablemos</button>
+    </header>
+
+    <main class="main-container">
+      <section class="section-hero">
+        <div class="availability-badge">
+          <span class="ping-wrapper">
+            <span class="ping"></span>
+            <span class="dot"></span>
+          </span>
+          Listo para colaborar
+        </div>
+        <h1 class="titulo">
+          Creando <span class="exp-sub">experiencias</span> <br />
+          web modernas.
+        </h1>
+        <p class="descripcion">
+          Desarrollador full stack enfocado en la creación de aplicaciones web
+          rápidas, claras y bien estructuradas. Me interesa construir interfaces
+          intuitivas y soluciones prácticas que realmente aporten valor.
+        </p>
+        <div class="cont-Info">
+          <button class="iconoBoton">
+            Explorar proyectos
+            <span class="material-symbols-outlined flecha">
+              arrow_forward
+            </span>
+          </button>
+          <button class="btoCv">Ver currículum</button>
+        </div>
+      </section>
+
+      <section class="about" id="Acerca de mi">
+        <div class="conteiner">
+          <p class="num">01.</p>
+          <h2 class="title">// Acerca de mi</h2>
+          <div class="line"></div>
+        </div>
+        <div class="code-container">
+          <div class="code-area">
+            <div class="contain-colors">
+              <div class="spot-red"></div>
+              <div class="spot-yellow"></div>
+              <div class="spot-green"></div>
+            </div>
+            <span class="bio">bio.ts</span>
+          </div>
+          <div class="code">
+            <pre>
+              <code>
+<span class="palabra-clave">class</span> <span class="clase">Developer</span> {
+  <span class="metodo-especial">constructor</span>() {
+    <span class="palabra-clave">this</span>.name = <span class="cadena">'Mateo Ahumada'</span>;
+    <span class="palabra-clave">this</span>.role = <span class="cadena">'Full stack developer'</span>;
+    <span class="palabra-clave">this</span>.location = <span class="cadena">'Argentina'</span>;
+  }
+
+  <span class="funcion">getPassions</span>() {
+    <span class="palabra-clave">return</span> [
+      <span class="cadena">'Minimalist Design'</span>,
+      <span class="cadena">'System Architecture'</span>,
+      <span class="cadena">'Open Source Contribution'</span>
+    ];
+  }
+
+  <span class="funcion">motto</span>() {
+    <span class="palabra-clave">return</span> <span class="cadena">'Code is poetry, efficiency is beauty.'</span>;
+  }
+}
+              </code>
+            </pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills" id="Skills">
+        <div class="conteiner">
+          <p class="num">02.</p>
+          <h2 class="title">// Habilidades</h2>
+          <div class="line"></div>
+        </div>
+        <div class="cards-skills">
+          <div class="cont-card">
+            <div class="icon-box jv">
+              <span class="material-symbols-outlined">html</span>
+            </div>
+            <h3>Front-end</h3>
+          </div>
+          <div class="cont-card">
+            <div class="icon-box db">
+              <span class="material-symbols-outlined"> database </span>
+            </div>
+            <h3>Back-end</h3>
+          </div>
+          <div class="cont-card">
+            <div class="icon-box sql">
+              <span class="material-symbols-outlined"> sql </span>
+            </div>
+            <h3>Base de datos</h3>
+          </div>
+          <div class="cont-card">
+            <div class="icon-box ux">
+              <span class="material-symbols-outlined"> architecture </span>
+            </div>
+            <h3>Diseño de UX</h3>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="Proyectos">
+        <div class="conteiner">
+          <p class="num">03.</p>
+          <h2 class="title">// Mis proyectos</h2>
+          <div class="line"></div>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-info">
+                <span class="material-symbols-outlined project-icon"
+                  >folder</span
+                >
+                <span class="project-file">quantum-analytics.v1</span>
+              </div>
+
+              <span class="material-symbols-outlined project-icon">
+                open_in_new
+              </span>
+            </div>
+
+            <div
+              class="project-image"
+              style="background-image: url(&quot;img/project1.jpg&quot;)"
+            ></div>
+
+            <div class="project-content">
+              <h3 class="project-title">Quantum Analytics</h3>
+
+              <p class="project-description">
+                High-performance data visualization platform built with React,
+                Three.js, and Node.js.
+              </p>
+
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">WebGL</span>
+                <span class="tech-tag">Redis</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-info">
+                <span class="material-symbols-outlined project-icon"
+                  >folder</span
+                >
+                <span class="project-file">quantum-analytics.v1</span>
+              </div>
+
+              <span class="material-symbols-outlined project-icon">
+                open_in_new
+              </span>
+            </div>
+
+            <div
+              class="project-image"
+              style="background-image: url(&quot;img/project1.jpg&quot;)"
+            ></div>
+
+            <div class="project-content">
+              <h3 class="project-title">Quantum Analytics</h3>
+
+              <p class="project-description">
+                High-performance data visualization platform built with React,
+                Three.js, and Node.js.
+              </p>
+
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">WebGL</span>
+                <span class="tech-tag">Redis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contacto">
+        <div class="conteiner">
+          <p class="num">04.</p>
+          <h2 class="title">// Contacto</h2>
+          <div class="line"></div>
+        </div>
+        <div class="contact-main">
+          <h3>Construyamos algo.</h3>
+
+          <p>
+            Estoy buscando nuevas oportunidades. Mi bandeja de entrada siempre
+            está abierta, ya sea que tengas alguna pregunta o simplemente
+            quieras saludar.
+          </p>
+
+          <div class="contact-input-wrapper">
+            <div class="contact-input">
+              <span class="contact-dollar">$</span>
+
+              <input
+                type="email"
+                placeholder="ingresa tu correo electrónico..."
+              />
+
+              <button class="material-symbols-outlined">send</button>
+            </div>
+          </div>
+
+          <div class="contact-links">
+            <a href="">linkedin</a>
+            <a href="">github</a>
+            <a href="">email</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
