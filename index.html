@@ -1,16 +1,36 @@
 <!doctype html>
-<html>
+<html lang="es">
   <head>
-    <title>Hever Ahumada</title>
     <meta charset="UTF-8" />
-    <meta name="description" content="Portafolio web Ahumada Hever Mateo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portafolio de Hever Mateo Ahumada, desarrollador full stack enfocado en aplicaciones web modernas, rápidas y bien estructuradas." />
+    <meta name="author" content="Hever Mateo Ahumada" />
+    <meta name="theme-color" content="#080a12" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hever Ahumada — Full Stack Developer" />
+    <meta property="og:description" content="Portafolio de Hever Mateo Ahumada, desarrollador full stack. Experiencias web modernas." />
+    <meta property="og:url" content="https://ahevermateo.github.io/portafolio-web/" />
+    <meta property="og:image" content="./img/ChatCRM.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hever Ahumada — Full Stack Developer" />
+    <meta name="twitter:description" content="Portafolio de Hever Mateo Ahumada, desarrollador full stack. Experiencias web modernas." />
+
+    <title>Hever Ahumada — Full Stack Developer</title>
+
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&amp;display=swap"
       rel="stylesheet"
     />
     <link
@@ -19,53 +39,71 @@
     />
   </head>
 
-  <body class="dark">
-    <header class="container-header">
+  <body>
+    <header class="container-header" id="site-header">
       <div class="header-brand">
         <span class="material-symbols-outlined icon">terminal</span>
         <span class="brand-name">dev.mate0o0</span>
       </div>
 
-      <nav class="nav-container">
-        <a href="#">./Acerca de mi</a>
-        <a href="#">./Habilidades</a>
-        <a href="#">./proyectos</a>
-        <a href="#">./contacto</a>
+      <nav class="nav-container" id="nav-menu" aria-label="Navegación principal">
+        <a href="#acerca-de-mi">./Acerca de mi</a>
+        <a href="#habilidades">./Habilidades</a>
+        <a href="#proyectos">./Proyectos</a>
+        <a href="#contacto">./Contacto</a>
       </nav>
 
-      <button class="button-header">Hablemos</button>
+      <div class="header-actions">
+        <a href="#contacto" class="button-header">Hablemos</a>
+
+        <button
+          id="menu-toggle"
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menú de navegación"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+        >
+          <span class="material-symbols-outlined menu-open" aria-hidden="true">menu</span>
+          <span class="material-symbols-outlined menu-close" aria-hidden="true">close</span>
+        </button>
+      </div>
     </header>
 
     <main class="main-container">
       <section class="section-hero">
-        <div class="availability-badge">
+        <div class="availability-badge reveal">
           <span class="ping-wrapper">
             <span class="ping"></span>
             <span class="dot"></span>
           </span>
           Listo para colaborar
         </div>
-        <h1 class="titulo">
+        <h1 class="titulo reveal" style="--d: 0.1s">
           Creando <span class="exp-sub">experiencias</span> <br />
           web modernas.
         </h1>
-        <p class="descripcion">
+        <p class="descripcion reveal" style="--d: 0.2s">
           Desarrollador full stack enfocado en la creación de aplicaciones web
           rápidas, claras y bien estructuradas. Me interesa construir interfaces
           intuitivas y soluciones prácticas que realmente aporten valor.
         </p>
-        <div class="cont-Info">
-          <button class="iconoBoton">
+        <div class="cont-Info reveal" style="--d: 0.3s">
+          <a href="#proyectos" class="btn-primary">
             Explorar proyectos
-            <span class="material-symbols-outlined flecha">
-              arrow_forward
-            </span>
-          </button>
-          <button class="btoCv">Ver currículum</button>
+            <span class="material-symbols-outlined flecha">arrow_forward</span>
+          </a>
+          <a
+            href="cv/Hever_Mateo_Ahumada..pdf"
+            target="_blank"
+            rel="noopener"
+            class="btn-secondary"
+            >Ver currículum</a
+          >
         </div>
       </section>
 
-      <section class="about" id="Acerca de mi">
+      <section class="about reveal" id="acerca-de-mi">
         <div class="conteiner">
           <p class="num">01.</p>
           <h2 class="title">// Acerca de mi</h2>
@@ -81,147 +119,168 @@
             <span class="bio">bio.ts</span>
           </div>
           <div class="code">
-            <pre>
-              <code>
-<span class="palabra-clave">class</span> <span class="clase">Developer</span> {
+            <pre><code><span class="palabra-clave">class</span> <span class="clase">Developer</span> {
   <span class="metodo-especial">constructor</span>() {
-    <span class="palabra-clave">this</span>.name = <span class="cadena">'Mateo Ahumada'</span>;
-    <span class="palabra-clave">this</span>.role = <span class="cadena">'Full stack developer'</span>;
+    <span class="palabra-clave">this</span>.name = <span class="cadena">'Hever Mateo Ahumada'</span>;
+    <span class="palabra-clave">this</span>.role = <span class="cadena">'Full Stack Developer'</span>;
     <span class="palabra-clave">this</span>.location = <span class="cadena">'Argentina'</span>;
   }
 
   <span class="funcion">getPassions</span>() {
     <span class="palabra-clave">return</span> [
-      <span class="cadena">'Minimalist Design'</span>,
-      <span class="cadena">'System Architecture'</span>,
-      <span class="cadena">'Open Source Contribution'</span>
+      <span class="cadena">'Interfaces intuitivas'</span>,
+      <span class="cadena">'Arquitectura de sistemas'</span>,
+      <span class="cadena">'Soluciones prácticas'</span>
     ];
   }
 
   <span class="funcion">motto</span>() {
-    <span class="palabra-clave">return</span> <span class="cadena">'Code is poetry, efficiency is beauty.'</span>;
+    <span class="palabra-clave">return</span> <span class="cadena">'El buen código no solo funciona, se entiende.'</span>;
   }
-}
-              </code>
-            </pre>
+}</code></pre>
           </div>
         </div>
       </section>
 
-      <section class="skills" id="Skills">
+      <section class="skills reveal" id="habilidades">
         <div class="conteiner">
           <p class="num">02.</p>
           <h2 class="title">// Habilidades</h2>
           <div class="line"></div>
         </div>
         <div class="cards-skills">
-          <div class="cont-card">
+          <div class="cont-card reveal" style="--d: 0.05s">
             <div class="icon-box jv">
               <span class="material-symbols-outlined">html</span>
             </div>
             <h3>Front-end</h3>
+            <p class="card-techs">HTML · CSS · React · TypeScript</p>
           </div>
-          <div class="cont-card">
+
+          <div class="cont-card reveal" style="--d: 0.1s">
             <div class="icon-box db">
-              <span class="material-symbols-outlined"> database </span>
+              <span class="material-symbols-outlined">database</span>
             </div>
             <h3>Back-end</h3>
+            <p class="card-techs">Node.js · Express · REST APIs</p>
           </div>
-          <div class="cont-card">
+
+          <div class="cont-card reveal" style="--d: 0.15s">
             <div class="icon-box sql">
-              <span class="material-symbols-outlined"> sql </span>
+              <span class="material-symbols-outlined">sql</span>
             </div>
             <h3>Base de datos</h3>
+            <p class="card-techs">PostgreSQL · Sequelize</p>
           </div>
-          <div class="cont-card">
-            <div class="icon-box ux">
-              <span class="material-symbols-outlined"> architecture </span>
+
+          <div class="cont-card reveal" style="--d: 0.2s">
+            <div class="icon-box git">
+              <span class="material-symbols-outlined">account_tree</span>
             </div>
-            <h3>Diseño de UX</h3>
+            <h3>Control de versiones</h3>
+            <p class="card-techs">Git · GitHub</p>
           </div>
         </div>
       </section>
 
-      <section class="projects" id="Proyectos">
+      <section class="projects reveal" id="proyectos">
         <div class="conteiner">
           <p class="num">03.</p>
           <h2 class="title">// Mis proyectos</h2>
           <div class="line"></div>
         </div>
         <div class="projects-grid">
-          <div class="project-card">
+          <article class="project-card reveal">
             <div class="project-header">
               <div class="project-info">
                 <span class="material-symbols-outlined project-icon"
                   >folder</span
                 >
-                <span class="project-file">quantum-analytics.v1</span>
+                <span class="project-file">ChatCRM</span>
               </div>
 
-              <span class="material-symbols-outlined project-icon">
-                open_in_new
-              </span>
+              <a
+                href="https://github.com/AheverMateo"
+                target="_blank"
+                rel="noopener"
+                aria-label="Abrir ChatCRM en GitHub"
+              >
+                <span class="material-symbols-outlined project-icon">
+                  open_in_new
+                </span>
+              </a>
             </div>
 
-            <div
+            <img
               class="project-image"
-              style="background-image: url(&quot;img/project1.jpg&quot;)"
-            ></div>
+              src="img/ChatCRM.png"
+              alt="Captura de pantalla de ChatCRM, plataforma de gestión de comunicación con clientes"
+            />
 
             <div class="project-content">
-              <h3 class="project-title">Quantum Analytics</h3>
+              <h3 class="project-title">ChatCRM</h3>
 
               <p class="project-description">
-                High-performance data visualization platform built with React,
-                Three.js, and Node.js.
+                Plataforma de gestion que centraliza la comunicacion con
+                clientes y prospectos, integrando chat en tiempo real y
+                automatizacion de tareas para mejorar la eficiencia comercial.
               </p>
 
               <div class="project-tech">
                 <span class="tech-tag">React</span>
-                <span class="tech-tag">WebGL</span>
-                <span class="tech-tag">Redis</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Tailwind CSS</span>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="project-card">
+          <article class="project-card reveal" style="--d: 0.1s">
             <div class="project-header">
               <div class="project-info">
                 <span class="material-symbols-outlined project-icon"
                   >folder</span
                 >
-                <span class="project-file">quantum-analytics.v1</span>
+                <span class="project-file">ecommerce-api</span>
               </div>
 
-              <span class="material-symbols-outlined project-icon">
-                open_in_new
-              </span>
+              <a
+                href="https://github.com/AheverMateo"
+                target="_blank"
+                rel="noopener"
+                aria-label="Abrir ecommerce-api en GitHub"
+              >
+                <span class="material-symbols-outlined project-icon">
+                  open_in_new
+                </span>
+              </a>
             </div>
 
             <div
-              class="project-image"
-              style="background-image: url(&quot;img/project1.jpg&quot;)"
+              class="project-image project-image-gradient"
+              role="img"
+              aria-label="Vista previa del proyecto ecommerce-api"
             ></div>
 
             <div class="project-content">
-              <h3 class="project-title">Quantum Analytics</h3>
+              <h3 class="project-title">ecommerce-api</h3>
 
               <p class="project-description">
-                High-performance data visualization platform built with React,
-                Three.js, and Node.js.
+                API REST de comercio electrónico con autenticación, catálogo de
+                productos y carrito de compras. Construida con Node.js, Express
+                y PostgreSQL.
               </p>
 
               <div class="project-tech">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">WebGL</span>
-                <span class="tech-tag">Redis</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">PostgreSQL</span>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
-      <section class="contact" id="contacto">
+      <section class="contact reveal" id="contacto">
         <div class="conteiner">
           <p class="num">04.</p>
           <h2 class="title">// Contacto</h2>
@@ -236,28 +295,72 @@
             quieras saludar.
           </p>
 
-          <div class="contact-input-wrapper">
+          <form
+            class="contact-input-wrapper"
+            id="contact-form"
+            novalidate
+          >
             <div class="contact-input">
-              <span class="contact-dollar">$</span>
+              <span class="contact-dollar" aria-hidden="true">$</span>
 
+              <label class="visually-hidden" for="contact-email"
+                >Correo electrónico</label
+              >
               <input
                 type="email"
+                id="contact-email"
+                name="email"
                 placeholder="ingresa tu correo electrónico..."
+                autocomplete="email"
               />
 
-              <button class="material-symbols-outlined">send</button>
+              <button
+                type="submit"
+                class="material-symbols-outlined"
+                aria-label="Enviar mensaje"
+              >
+                send
+              </button>
             </div>
-          </div>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
 
           <div class="contact-links">
-            <a href="">linkedin</a>
-            <a href="">github</a>
-            <a href="">email</a>
+            <a href="https://www.linkedin.com/in/hever-ahumada/" target="_blank" rel="noopener"
+              >linkedin</a
+            >
+            <a href="https://github.com/AheverMateo" target="_blank" rel="noopener"
+              >github</a
+            >
+            <a href="mailto:brandonahumada804@gmail.com">email</a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer></footer>
+    <button
+      class="back-to-top"
+      id="back-to-top"
+      type="button"
+      aria-label="Volver arriba"
+    >
+      <span class="material-symbols-outlined" aria-hidden="true">arrow_upward</span>
+    </button>
+
+    <footer class="footer">
+      <div class="footer-copy">
+        <span class="material-symbols-outlined footer-icon">copyright</span>
+        <p class="footer-text">
+          Diseñado &amp; Desarrollado por Hever Mateo Ahumada — <span id="year">2026</span>
+        </p>
+      </div>
+      <div class="footer-meta">
+        <span>V1.0.0</span>
+        <span>•</span>
+        <span>Portafolio Personal</span>
+      </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
   </body>
 </html>
